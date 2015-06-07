@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	h1 this is where you sell #{name} 
+
+	form(action="save" ,method="post").form-horizontal
+		h4 Name : 
+			<input type="text" name="name" placeholder="hesru yenu ?"><br>
+		h4 ISBN : 
+			<input type="text" name="isbn" placeholder="ISBN without -"><br>
+		h4 Contact : 
+			<input type="text" name="contact" placeholder="10 digit contact"><br>
+		h4 Email :
+			input(type="email" name="email" placeholder="your@email.com")
+		h4 College : 
+			select
+				option(value="1") PESIT
+				option(value="2") PESU
+				option(value="3") PESIT
+				option(value="4") PESHM
+				option(value="5") BIT
+				option(value="6") BMSCE 
+			
+		h4
+			<input type="submit" class="btn btn-default" value="SELL ! "><br>

@@ -1,0 +1,7 @@
+extends layout
+block content
+  h1= title
+  p Welcome to #{title}
+  .container
+  button(onclick="window.location.href='/dead'").btn.btn-primary Buy
+  button(onclick="window.location.href='/sell'").btn.btn-primary Sell
