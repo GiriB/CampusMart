@@ -29,11 +29,24 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+//home page - have to add user authentication 
 app.get('/', routes.buysell);
+
+//redirecting dead ends here
 app.get('/dead',routes.dead);
+
+// create a new item to be sold 
 app.get('/sell',routes.sell);
+
+//saving the item 
 app.post('/save',routes.save);
-app.get('/users', user.list);
+
+// list available items - have to change to /list/:tablename 
+app.get('/list',routes.list);
+
+app.get('/buy',routes.buy);
+
+app.post('/search',routes.search);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

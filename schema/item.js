@@ -6,6 +6,8 @@ module.exports = mongoose.model('item',{
           ISBN:String,
           collegeIDs:Array,
           sellerEmail:String,
+          price:Number,
+          branch:String
           
 });
 

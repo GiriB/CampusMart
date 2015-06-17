@@ -1,0 +1,8 @@
+extends layout 
+block content 
+	p.light Searching ...	
+	h1=title
+	ul
+		each item, index in results
+			- humandate = new Date(item.created)
+			li= item.ISBN + ":" + item.sellerEmail + ":"+ item.created + ":" + item.collegeIDs + "and index is " + index

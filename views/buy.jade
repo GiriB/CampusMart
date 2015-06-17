@@ -1,0 +1,9 @@
+extends layout 
+block content 
+	.col-sm-4(style="padding-top:10px")
+	.col-sm-4(style="padding-top:10px")
+		p.light What do you want to search for ?
+		form(action="search" method="post").pure-form
+			label(for="isbn") ISBN:
+			input(type="text",name="isbn",required) 
+	.col-sm-4(style="padding-top:10px")

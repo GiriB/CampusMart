@@ -1,7 +1,11 @@
 extends layout
 block content
-  h1= title
-  p Welcome to #{title}
-  .container
-  button(onclick="window.location.href='/dead'").btn.btn-primary Buy
-  button(onclick="window.location.href='/sell'").btn.btn-primary Sell
+	.col-md-12(style="height:10px")
+	.col-md-4
+	.container(style="border='1px'").light.col-md-4
+		h1= title
+		p Welcome to #{title}
+		button(onclick="window.location.href='/buy'", style=" width:50%; padding:5px 5px 5px 5px").btn.btn-primary Buy
+		button(onclick="window.location.href='/sell'", style=" width:50%; padding:5px 5px 5px 5px").btn.btn-primary Sell
+		.col-md-12
+	.col-md-4
