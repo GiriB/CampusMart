@@ -2,7 +2,11 @@ extends layout
 
 block content
 	h1=title
-	ul
-		each item, index in results
-			- humandate = new Date(item.created)
-			li= item.ISBN + ":" + item.sellerEmail + ":"+ item.created + ":" + item.collegeIDs + "and index is " + index
+	
+	.col-md-0.5
+	.col-md-11
+		ul.list-group
+			each item, index in results
+				- humandate = new Date(item.created)
+				li.list-group-item= item.ISBN + ":" + item.sellerEmail + ":"+ item.created + ":" + item.collegeIDs + "and index is " + index
+	.col-md-0.5			
