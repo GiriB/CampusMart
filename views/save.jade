@@ -1,0 +1,24 @@
+// we check if status=='manualSave' ,then we print the form so that details can be entered manually
+//else if the save is success that is if status=='autoSave', then we print the confirmation giving the details we found. 
+extends layout 
+block content
+	.container(style="margin:10px auto;").light
+		if status=='autoSave'
+			h2 this is autoSave
+		else if status=='manualSave'
+			h1(align="center") this is where you give the details about the book because we aint got none 
+				.col-md-4
+				.col-md-4
+					form(action="saveManual",method="post",id="iteminfo",padding-top="5cm").pure-form
+						label Title : 
+							<input type="text" name="Title" placeholder="title yenu ?" required><br>
+						label ISBN : 
+							<input type="text" name="isbn" placeholder="ISBN without -"><br>
+						label Price : 
+							<input type="number" name="price" placeholder="the price you want to sell for"><br>
+						label Edition :
+							input(type="number" name="edition" placeholder="edition of the book ") 
+						label
+							<input type="submit"  value="SELL ! "><br>
+				.col-md-4
+
