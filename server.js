@@ -38,7 +38,10 @@ app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
 
+//default view engine 
 app.set('view engine', 'jade'); // set up jade for templating
+app.engine('jade', require('jade').__express); //for .jade files
+app.engine('ejs', require('ejs').renderFile);  //for .ejs files
 
 // required for passport
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret

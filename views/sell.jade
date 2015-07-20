@@ -8,13 +8,13 @@ block content
 		.col-md-4
 			form(action="save",method="post",id="iteminfo",padding-top="5cm").pure-form
 				label Name : 
-					<input type="text" name="name" placeholder="hesru yenu ?"><br>
+					<input type="text" name="name" placeholder="hesru yenu ?" required><br>
 				label ISBN : 
 					<input type="text" name="isbn" placeholder="ISBN without -"><br>
 				label Contact : 
-					<input type="text" name="contact" placeholder="10 digit contact"><br>
+					<input type="text" name="contact" placeholder="10 digit contact" required><br>
 				label Email :
-					input(type="email" name="email" placeholder="your@email.com")
+					input(type="email" name="email" placeholder="your@email.com" required)
 				
 				label College : 
 					// TRB: had missed to connect this select with the form , solved by giving form attribute the value of form ID .

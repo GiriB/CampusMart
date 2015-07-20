@@ -5,5 +5,6 @@ module.exports = mongoose.model('book',{
           title:String,
           author:String,
           originalPrice:Number,
+          edition:Number
           
 });
