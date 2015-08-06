@@ -40,7 +40,7 @@ app.use(bodyParser()); // get information from html forms
 
 //default view engine 
 app.set('view engine', 'jade'); // set up jade for templating
-app.engine('jade', require('jade').__express); //for .jade files
+app.engine('html', require('ejs').renderFile); //for .jade files
 app.engine('ejs', require('ejs').renderFile);  //for .ejs files
 
 // required for passport
@@ -54,4 +54,4 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 
 // launch ======================================================================
 app.listen(port);
-console.log('The magic happens on port ' + port);
+console.log('The magic happens on port on the port I say ' + port);

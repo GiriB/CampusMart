@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+        
+         <link rel="stylesheet" href="/stylesheets/fa/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="/stylesheets/login-style.css">    
+  </head>
+
+ 
+
+    <body class="align">
+
+  <div class="site__container">
+    
+    <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    
+    <div class="grid__container">
+
+      <form action="/signup" method="post" class="form form--login">
+        
+        <div class="form__field">
+          <label class="fa fa-2x fa-at" for="login__email"><span class="hidden">Email</label>
+          <input id="login__email" name="email" type="email" class="form__input" placeholder="EmailID" required>
+        </div>
+            
+        <div class="form__field">
+          <label class="fa fa-2x fa-user" for="login__name"><span class="hidden">Name</span></label>
+          <input id="login__name" type="text" class="form__input" placeholder="Name" required>
+        </div>
+
+        <div class="form__field">
+          <label class="fa fa-3x fa-mobile" for="login__contact"><span class="hidden">Contact</span></label>
+          <input id="login__contact" type="password" class="form__input" placeholder="Contact" required>
+        </div>
+        <div class="form__field">
+          <label class="fa fa-2x fa-lock" for="login__password"><span class="hidden">Password</span></label>
+          <input id="login__password" name="password" type="password" class="form__input" placeholder="Password" required>
+        </div>
+
+        <div class="form__field">
+          <input type="submit" value="Sign Up">
+        </div>
+
+      </form>
+      <p class="text--center">Already a member ? <a href="/login">Sign In</a> <span class="fontawesome-arrow-right"></span></p>
+
+      
+    </div>
+
+  </div>
+
+</body>
+    
+    
+    
+    
+   
+</html>

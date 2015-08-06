@@ -12,6 +12,13 @@ var BOOK_API_KEY = config.BOOK_API_KEY;
 console.log(config.BOOK_API_KEY);
 
 
+
+exports.test = function(req,res){
+	console.log('in test');
+	res.render('signin.html',{});
+};
+
+
 exports.buysell = function(req, res){
   res.render('index', { title: 'CampusMart' });
 };

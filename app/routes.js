@@ -6,7 +6,10 @@ module.exports = function(app, passport) {
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
-    app.get('/', routes.buysell);
+   
+
+    //for testing purpose
+    // app.get('/', routes.test);
 
     // =====================================
     // LOGIN ===============================
@@ -15,7 +18,7 @@ module.exports = function(app, passport) {
     app.get('/login', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('login.ejs', { message: req.flash('loginMessage') }); 
+        res.render('signin.html', { message: req.flash('loginMessage') }); 
     });
 
     // process the login form
@@ -28,7 +31,7 @@ module.exports = function(app, passport) {
     app.get('/signup', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('signup.ejs', { message: req.flash('signupMessage') });
+        res.render('signup.html', { message: req.flash('signupMessage') });
     });
 
     // process the signup form

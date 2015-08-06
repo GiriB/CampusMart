@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    
+    
+    
+        <link rel="stylesheet" href="/stylesheets/fa/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="/stylesheets/login-style.css">   
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body class="align">
+
+  <div class="site__container">
+
+     <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <div class="grid__container">
+
+      <form action="/login" method="post" class="form form--login">
+
+        <div class="form__field">
+          <label class="fa fa-user fa-2x " for="login__username"><span class="hidden">Username</span></label>
+          <input id="login__username" name="email" type="text" class="form__input" placeholder="Username" required>
+        </div>
+
+        <div class="form__field">
+          <label class="fa fa-lock fa-2x " for="login__password"><span class="hidden">Password</span></label>
+          <input id="login__password" name="password" type="password" class="form__input" placeholder="Password" required>
+        </div>
+
+        <div class="form__field">
+          <input type="submit" value="Sign In">
+        </div>
+
+      </form>
+
+      <p class="text--center">Not a member? <a href="/signup">Sign up now</a> <span class="fontawesome-arrow-right"></span></p>
+
+    </div>
+
+  </div>
+
+</body>
+    
+    
+    
+    
+    
+  </body>
+</html>
